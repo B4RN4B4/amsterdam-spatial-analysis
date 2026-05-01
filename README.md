@@ -34,6 +34,24 @@ have over 5 km² each.
 
 ---
 
+---
+
+### 3. Cycling Network Analysis
+Mapping and analysing Amsterdam's 1,742 km cycling network 
+by district and type of infrastructure.
+
+**Tools:** Python · GeoPandas · Matplotlib  
+**Key finding:** The cycling network is densest in the historic centre — 
+the bike was not added as a modern solution, it was integrated 
+into the city's historical fabric.
+
+**Outputs:**
+- Cycling network map
+- Network length by district (km)
+- Combined map: building age + cycling network
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

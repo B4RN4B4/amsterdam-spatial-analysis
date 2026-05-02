@@ -34,8 +34,6 @@ have over 5 km² each.
 
 ---
 
----
-
 ### 3. Cycling Network Analysis
 Mapping and analysing Amsterdam's 1,742 km cycling network 
 by district and type of infrastructure.
@@ -49,6 +47,21 @@ into the city's historical fabric.
 - Cycling network map
 - Network length by district (km)
 - Combined map: building age + cycling network
+
+---
+
+### 4. Flood Risk Analysis
+Mapping Amsterdam's flood risk zones and overlaying them 
+with building age data to understand urban vulnerability.
+
+**Tools:** Python · GeoPandas · Matplotlib  
+**Key finding:** The historic centre — built by 17th century engineers 
+on the most stable ground — shows moderate flood risk. Noord, 
+colonised later with modern technology, carries the highest risk.
+
+**Outputs:**
+- Flood risk map by zone and probability
+- Combined map: flood risk + building age
 
 ---
 

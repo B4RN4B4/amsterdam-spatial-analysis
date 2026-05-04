@@ -65,6 +65,23 @@ colonised later with modern technology, carries the highest risk.
 
 ---
 
+### 5. Green Space vs Flood Risk — Correlation Analysis
+Statistical analysis of the relationship between green space 
+and flood risk across Amsterdam's districts.
+
+**Tools:** Python · GeoPandas · SciPy · Matplotlib  
+**Key finding:** A strong positive correlation (r=0.764, p=0.045) exists 
+between green space and flood risk — but not because green causes risk. 
+Both variables are driven by a third: topography. Peripheral districts 
+are low-lying, have more space for parks, and are closer to water.
+
+**Outputs:**
+- Scatter plot with trend line
+- Pearson correlation coefficient and p-value
+- Critical interpretation of spurious correlation
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

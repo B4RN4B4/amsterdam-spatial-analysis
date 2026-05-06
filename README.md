@@ -82,6 +82,27 @@ are low-lying, have more space for parks, and are closer to water.
 
 ---
 
+### 6. Groundwater & Multivariate Analysis
+Testing the hypothesis that topography is the confounding variable 
+behind the green space / flood risk correlation.
+
+**Tools:** Python · GeoPandas · SciPy · NumPy · Matplotlib  
+**Key finding:** Green space and flood risk correlate strongly (r=0.764) 
+but not causally. Both are driven by groundwater level and geography. 
+The strongest correlation in the dataset is Verde vs Falda (r=-0.904, p=0.005) — 
+peripheral districts have more green space AND lower groundwater, 
+confirming topography as the confounding variable.
+
+**Note:** Groundwater dataset has partial city coverage — 
+findings are indicative, not conclusive.
+
+**Outputs:**
+- Groundwater & drainage map
+- Multivariate scatter plot (3 correlations)
+- Statistical confirmation of confounding variable hypothesis
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

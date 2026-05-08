@@ -103,6 +103,24 @@ findings are indicative, not conclusive.
 
 ---
 
+### 7. Urban Growth Through Time
+Analysing 500 years of Amsterdam's urban development decade by decade,
+from the first recorded buildings in 1515 to the present day.
+
+**Tools:** Python · GeoPandas · Matplotlib · Pandas  
+**Key finding:** Amsterdam's growth tells three distinct stories: 
+the Golden Age (1600–1700) built slowly but with extraordinary quality; 
+the Industrial Revolution (1880–1930) exploded the city outward in all 
+directions simultaneously; WWII brought construction to a near-complete 
+halt, visible as a sharp dip in the 1940s.
+
+**Outputs:**
+- New buildings per decade (bar chart with historical periods)
+- Cumulative urban growth curve (500 years)
+- Growth by district over time (multi-line chart)
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

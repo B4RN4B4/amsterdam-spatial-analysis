@@ -119,6 +119,29 @@ using the city's official Woningbouwplannen dataset.
 
 ---
 
+### 9. Amsterdam Urban Dashboard
+An interactive multi-layer map combining all datasets analysed 
+in this series into a single Digital Twin-style dashboard.
+
+**Tools:** Python · GeoPandas · Folium  
+**Layers:**
+- Neighbourhood boundaries
+- Green areas (with name and size on click)
+- Flood risk zones
+- Cycling network
+- Future housing projects 2026–2045 (with project name and units on click)
+
+**Key discovery:** The Marineterrein — the former Dutch Navy compound, 
+occupied since the Golden Age — is planned for 800 new housing units 
+starting 2034. History and future in the same polygon.
+
+🗺️ [Open Interactive Dashboard](https://b4rn4b4.github.io/amsterdam-spatial-analysis/amsterdam_dashboard.html)
+
+**Next steps:** Add road network and public transport layers 
+for a complete mobility analysis.
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

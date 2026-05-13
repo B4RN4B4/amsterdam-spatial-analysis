@@ -142,6 +142,28 @@ for a complete mobility analysis.
 
 ---
 
+### 10. Spatial Clustering (DBSCAN)
+Using machine learning to identify Amsterdam's natural urban zones 
+based on building position and construction year — without any 
+predefined boundaries.
+
+**Tools:** Python · GeoPandas · Scikit-learn · Matplotlib  
+**Algorithm:** DBSCAN (Density-Based Spatial Clustering of Applications with Noise)  
+**Key finding:** Amsterdam organises naturally into 38 distinct clusters. 
+The historic centre forms one dominant cluster of 17,834 buildings 
+with a median construction year of 1897. Peripheral districts form 
+smaller, more recent clusters — confirming the city's concentric 
+growth pattern from the Golden Age outward.
+
+**Note:** 6,194 buildings (13.9%) classified as noise — isolated 
+structures that don't belong to any natural cluster.
+
+**Outputs:**
+- Colour-coded cluster map (38 clusters)
+- Bubble chart: cluster size vs location vs age
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

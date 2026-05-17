@@ -164,6 +164,27 @@ structures that don't belong to any natural cluster.
 
 ---
 
+### 11. Deep Dive: Jordaan
+A comprehensive urban analysis of Amsterdam's most iconic neighbourhood,
+combining spatial data, historical research, and interactive mapping.
+
+**Tools:** Python · GeoPandas · Folium · Matplotlib  
+**Key findings:**
+- 2,749 buildings spanning 400 years (1612–2023)
+- Median construction year: 1901 — the neighbourhood looks medieval but was mostly built during the Industrial Revolution
+- Four distinct historical phases: Golden Age, Stagnation, Industrial Expansion, Gentrification
+- Cycling infrastructure follows perimeter streets — internal circulation relies on low-traffic shared streets, a typical Dutch design approach
+
+**Outputs:**
+- Buildings per decade chart (colour-coded by era)
+- Interactive map with buildings, green areas, and cycling network
+- Professional urban analysis report (Markdown)
+
+🗺️ [Interactive Jordaan Map](https://b4rn4b4.github.io/amsterdam-spatial-analysis/jordaan_dashboard.html)
+📄 [Full Report](jordaan_report.md)
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

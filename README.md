@@ -185,6 +185,29 @@ combining spatial data, historical research, and interactive mapping.
 
 ---
 
+### 12. Building Density Raster
+Introduction to raster data processing — converting 44,500 vector 
+building footprints into a continuous density surface at 100m resolution.
+
+**Tools:** Python · Rasterio · NumPy · Matplotlib  
+**Key concepts introduced:**
+- Raster vs vector data structures
+- Pixel resolution and geographic transforms
+- CRS in metres (EPSG:28992 — Dutch RD New)
+- GeoTIFF format — the standard for professional raster data
+- Multi-band raster concepts
+
+**Key finding:** The historic centre reaches 82 buildings per 100x100m pixel — 
+the highest density in the city. Density drops progressively toward 
+the periphery, confirming the concentric growth pattern identified 
+in previous analyses.
+
+**Outputs:**
+- Building density raster map (PNG)
+- GeoTIFF file (amsterdam_density.tif) — openable in QGIS and any GIS software
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

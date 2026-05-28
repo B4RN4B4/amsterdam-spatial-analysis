@@ -208,6 +208,33 @@ in previous analyses.
 
 ---
 
+### 13. Sentinel-2 Satellite Imagery & NDVI Analysis
+Processing real satellite imagery from the Copernicus programme 
+to analyse vegetation cover over Amsterdam.
+
+**Tools:** Python · Rasterio · NumPy · Matplotlib  
+**Data source:** Sentinel-2 L1C (ESA/Copernicus) — 17 August 2024  
+**Resolution:** 10 metres per pixel
+
+**Key concepts introduced:**
+- Multi-band satellite imagery (13 spectral bands)
+- True Colour Image (TCI) — RGB natural colour composite
+- NDVI (Normalized Difference Vegetation Index) — (NIR - Red) / (NIR + Red)
+- Cross-validation between vector open data and satellite-derived indices
+
+**Key findings:**
+- NDVI range: -0.511 (water/IJmeer) to 0.757 (dense vegetation)
+- City mean NDVI: 0.178 — predominantly built-up with scattered green
+- Strong correspondence between Amsterdam open data park polygons 
+  and high-NDVI areas in satellite imagery — mutual validation of both datasets
+
+**Outputs:**
+- True colour image of Amsterdam (17 Aug 2024)
+- NDVI map (Red = built-up/water · Green = vegetation)
+- Combined NDVI + green areas overlay
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

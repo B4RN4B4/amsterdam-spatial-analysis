@@ -235,6 +235,34 @@ to analyse vegetation cover over Amsterdam.
 
 ---
 
+### 14. Urban Heat Island Analysis
+Measuring surface temperature across Amsterdam using Landsat 8 
+thermal infrared data and correlating it with vegetation cover (NDVI).
+
+**Tools:** Python · Rasterio · NumPy · SciPy · Matplotlib  
+**Data sources:** 
+- Landsat 8 L2 Surface Temperature (USGS Earth Explorer) — 11 August 2024
+- Sentinel-2 NDVI (Copernicus) — 17 August 2024  
+**Resolution:** 30 metres per pixel (thermal band)
+
+**Key findings:**
+- Surface temperature range: 10.2°C (water/canals) to 54.0°C (industrial rooftops)
+- City mean surface temperature: 28.0°C on 11 August 2024
+- NDVI vs Temperature correlation (land only): r = -0.188, p ≈ 0
+- Confirmed: more vegetation = lower surface temperature
+- Industrial areas in Noord reach 45-50°C — the hottest zones in the city
+- Water bodies (IJ, IJmeer, canals) are the most effective cooling elements
+
+**Methodological note:** NDVI and temperature data are from different dates 
+(6 days apart). Same-date imagery would produce a stronger correlation. 
+Despite this, the signal is statistically robust with 534,000 valid pixels.
+
+**Outputs:**
+- Urban Heat Island map (surface temperature)
+- Combined NDVI + Temperature + Correlation analysis
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

@@ -263,6 +263,31 @@ Despite this, the signal is statistically robust with 534,000 valid pixels.
 
 ---
 
+### 15. Park Accessibility Analysis
+Measuring how much of Amsterdam is within 500 metres of a park,
+using spatial buffer analysis at neighbourhood level.
+
+**Tools:** Python · GeoPandas · Matplotlib  
+**Key findings:**
+- 57.8% of Amsterdam's surface is within 500m of a park
+- Zuid (86.7%) and West (84.9%) are the most accessible districts
+- Centrum scores only 65.4% — the historic centre has few formal parks
+- Westpoort (13.1%) and Weesp (14.6%) are outliers — industrial/rural areas
+
+**Methodological note:** Analysis measures geometric accessibility 
+(straight-line distance), not walking distance through the street network. 
+Real accessibility would be slightly lower.
+
+**Next step:** Correlating park accessibility with surface temperature 
+(Urban Heat Island) to test whether less green = more heat at district level.
+
+**Outputs:**
+- Park accessibility map (500m buffer overlay)
+- Accessibility chart by district (colour-coded by threshold)
+- Neighbourhood-level accessibility choropleth map
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

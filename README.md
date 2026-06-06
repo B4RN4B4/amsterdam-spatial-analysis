@@ -288,6 +288,31 @@ Real accessibility would be slightly lower.
 
 ---
 
+### 16. Park Accessibility vs Urban Heat Island — Correlation
+Testing whether neighbourhoods with better park accessibility 
+also have lower surface temperatures.
+
+**Tools:** Python · GeoPandas · Rasterio · SciPy · Matplotlib  
+**Key finding:** No significant correlation — r = -0.015, p = 0.736.
+Park accessibility (distance to formal parks) does not predict 
+surface temperature at neighbourhood scale.
+
+**Why?**
+- Temperature varies at 30m scale; accessibility is averaged over entire neighbourhoods
+- Formal park proximity ≠ actual vegetation cover (private gardens, street trees not counted)
+- Dominant temperature drivers are urban materials, building density, 
+  and water bodies — not park accessibility
+
+**Scientific note:** A null result is a real result. 
+The absence of correlation tells us where NOT to look 
+when modelling Urban Heat Island in Amsterdam.
+
+**Outputs:**
+- Scatter plot: park accessibility vs surface temperature (518 neighbourhoods)
+- Statistical analysis with Pearson correlation
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

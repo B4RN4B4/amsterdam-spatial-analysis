@@ -313,6 +313,35 @@ when modelling Urban Heat Island in Amsterdam.
 
 ---
 
+### 17. PostGIS Spatial Database
+Loading Amsterdam's spatial datasets into a professional PostgreSQL/PostGIS 
+database and running spatial SQL queries.
+
+**Tools:** PostgreSQL 17 · PostGIS 3.6 · pgAdmin 4 · Python · SQLAlchemy · GeoAlchemy2
+
+**What is PostGIS?**
+PostGIS is a spatial extension for PostgreSQL — the industry standard 
+for managing geographic data in professional GIS environments. 
+Used by Arcadis, Esri, Royal HaskoningDHV and most major GIS organisations.
+
+**Datasets imported:**
+- `edifici` — 44,517 building footprints with construction year
+- `quartieri` — 518 neighbourhood polygons
+- `parchi` — 125 green areas
+
+**Key queries:**
+- Buildings per neighbourhood with average construction year (spatial JOIN)
+- Pre-1700 buildings within 200m of a park (ST_Distance + LATERAL JOIN)
+- Historic building density per km² by neighbourhood (ST_Area + ST_Within)
+
+**Key finding:** Burgwallen-Oost (Centrum) has the highest historic building 
+density — 3,669 pre-1800 buildings per km². An extraordinary concentration 
+of Golden Age urban fabric in a 0.07 km² neighbourhood.
+
+**SQL queries:** See `amsterdam_postgis_queries.sql`
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

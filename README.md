@@ -342,6 +342,36 @@ of Golden Age urban fabric in a 0.07 km² neighbourhood.
 
 ---
 
+### 18. Parking Pressure Analysis
+Analysing Amsterdam's parking pressure data to identify residential 
+vs commercial/touristic zones based on temporal usage patterns.
+
+**Tools:** Python · GeoPandas · Matplotlib  
+**Data source:** Amsterdam Open Data — Parkeerdruk (parking pressure) by neighbourhood
+
+**Data quality note:** Original geometries had inverted coordinate order 
+(lat,lng instead of lng,lat) — corrected via coordinate swap and CRS reprojection. 
+Investigated apparently irregular polygon shapes ("arrow-like" geometries) — 
+confirmed these are geographically accurate, representing dike-following 
+zones (Buiksloterdijk) and riverbank areas (Vechtoever), not data errors.
+
+**Key findings:**
+- Average weekday evening parking pressure: 54.3% (112 zones analysed)
+- Highest pressure: Kazernebuurt (95%), Groenmarktkadebuurt (93%) — historic centre
+- Comparing afternoon vs evening pressure reveals land use patterns:
+  - Museumplein: 100% afternoon → 30% evening (-70) — tourist/commercial zone
+  - Circus/Kermisbuurt: 43% → 73% (+30) — residential zone
+  - Science Park-Noord: +22 evening — university/office area
+
+**Outputs:**
+- Parking pressure choropleth map (weekday evening)
+- Temporal comparison table (afternoon vs evening, residential vs commercial signature)
+
+**Next step:** Air quality analysis, building toward a multivariate study 
+of traffic, green space, water, and air quality.
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

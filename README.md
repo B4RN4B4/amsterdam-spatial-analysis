@@ -372,6 +372,32 @@ of traffic, green space, water, and air quality.
 
 ---
 
+### 19. Air Quality Analysis (NO2)
+Analysing nitrogen dioxide (NO2) concentrations across Amsterdam 
+using 484 monitoring stations and 15 years of historical data (2010–2025).
+
+**Tools:** Python · GeoPandas · Pandas · Matplotlib  
+**Data source:** Amsterdam Open Data — NO2 metingen locaties + NO2 metingen jaren
+
+**Key findings:**
+- Amsterdam has nearly halved NO2 levels in 15 years — from 37.5 µg/m³ (2010) 
+  to 16.8 µg/m³ (2025), well below the EU limit of 40 µg/m³
+- Three key moments in the trend:
+  - 2017–2019: sharp drop following introduction of low-emission zones (milieuzones)
+  - 2020: COVID lockdown caused an immediate ~25% reduction
+  - 2020–2025: levels never returned to pre-COVID values — permanent behavioural change
+- Spatial pattern: centre is most polluted (up to 29.8 µg/m³), 
+  periphery significantly cleaner (down to 8.1 µg/m³)
+
+**Outputs:**
+- NO2 annual average trend 2010–2025 (with EU limit reference)
+- Spatial map of NO2 concentration by monitoring station (2024)
+
+**Next step:** Correlating NO2 with parking pressure data to test 
+whether traffic intensity predicts air quality at neighbourhood level.
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

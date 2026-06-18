@@ -398,6 +398,37 @@ whether traffic intensity predicts air quality at neighbourhood level.
 
 ---
 
+### 20. NO2 vs Parking Pressure — Traffic & Air Quality Correlation
+Testing whether traffic intensity (measured via parking pressure) 
+predicts air quality (NO2 concentration) at station level.
+
+**Tools:** Python · GeoPandas · SciPy · Matplotlib  
+**Key finding:** r = 0.273, p ≈ 0 — weak but statistically significant 
+positive correlation. Zones with higher parking pressure tend to have 
+higher NO2 concentrations.
+
+**Methodology:**
+- 399 NO2 monitoring stations (2024 data)
+- 112 parking pressure zones (weekday evening)
+- Spatial nearest-join: each NO2 station matched to closest parking zone
+- Pearson correlation between parking pressure (%) and NO2 (µg/m³)
+
+**Why is the correlation weak?**
+- Parking pressure is a proxy for traffic, not a direct measure
+- NO2 stations measure air at specific points, not zone averages
+- Many stations share the same nearest parking zone (visible as 
+  vertical clusters at x=25 in the scatter plot)
+- Other factors dominate locally: wind, building geometry, green space
+
+**Scientific note:** A weak correlation with p ≈ 0 on 400 data points 
+is a real signal — traffic intensity does predict air quality direction, 
+but explains only part of the variance.
+
+**Outputs:**
+- Scatter plot: parking pressure vs NO2 concentration (400 stations)
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

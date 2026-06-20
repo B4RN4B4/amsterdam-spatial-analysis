@@ -429,6 +429,40 @@ but explains only part of the variance.
 
 ---
 
+### 21. Multivariate System Analysis — Water, Green, Traffic & Air Quality
+Bringing together four independent datasets to understand how Amsterdam's 
+districts function as an interconnected urban system.
+
+**Tools:** Python · GeoPandas · Pandas · SciPy · Matplotlib  
+**Variables (aggregated by Stadsdeel):**
+- Water % — calculated by comparing "Stadsdelen" vs "Stadsdelen excl. water" 
+  official boundary datasets (area difference)
+- Green space (km²) — from parks dataset
+- Parking pressure (%) — traffic proxy, weekday evening
+- NO2 (µg/m³) — air quality, 2024 average
+
+**Key findings — correlation matrix:**
+- Parking Pressure vs NO2: r = 0.882 — very strong. At district level, 
+  traffic intensity strongly predicts air quality (far stronger than the 
+  station-level correlation of r = 0.273 found in the previous project — 
+  aggregation removes local noise)
+- Green Space vs NO2: r = -0.868 — very strong negative correlation
+- Green Space vs Parking Pressure: r = -0.829 — very strong negative correlation
+- Water % is nearly independent of all other variables (|r| < 0.26) — 
+  Amsterdam's water distribution follows a different, more historical 
+  geographic logic than modern traffic and vegetation patterns
+
+**Conclusion:** Green space, traffic, and air quality form a tightly 
+interconnected system at district scale. Water behaves as an independent 
+structural feature of the city, shaped by centuries of land reclamation 
+rather than contemporary urban planning forces.
+
+**Outputs:**
+- Multivariate correlation heatmap (4x4 matrix)
+- Full data table: water %, green km², parking pressure, NO2 by Stadsdeel
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

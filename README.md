@@ -462,6 +462,43 @@ rather than contemporary urban planning forces.
 - Full data table: water %, green km², parking pressure, NO2 by Stadsdeel
 
 ---
+---
+
+### 22. Population-Weighted Park Accessibility
+Refining the park accessibility analysis from Project 15 by weighting 
+results by population rather than surface area — directly addressing 
+a methodological critique raised by a London-based architect in the 
+comments of an earlier LinkedIn post.
+
+**Tools:** Python · GeoPandas · Pandas · Matplotlib  
+**Data sources:**
+- CBS Kerncijfers wijken en buurten 2023 (Dutch national statistics)
+- Amsterdam park polygons (Amsterdam Open Data)
+- Amsterdam neighbourhood boundaries with CBS codes
+
+**Key findings:**
+- 77.6% of Amsterdam's population lives within 500m of a park
+- vs 57.8% of Amsterdam's surface area (Project 15)
+- The 20-point difference confirms that Amsterdam has concentrated 
+  residential development in areas with good park proximity
+- West (87.4%) and Zuid (84.0%) serve their populations best
+- Centrum remains the least accessible district (68.9%) even 
+  when weighted by population
+
+**Methodology:**
+For each neighbourhood: pop_accessible = population × (area within 500m buffer / total area)
+Assumes uniform population distribution within each neighbourhood.
+
+**Comparison chart:** Area-based vs population-weighted accessibility 
+by Stadsdeel — population weighting improves scores in almost every 
+district, with the notable exception of Zuid where large parks serve 
+less densely populated areas.
+
+**Outputs:**
+- Comparative bar chart: area-based vs population-weighted by Stadsdeel
+- Population accessibility statistics by district
+
+---
 
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)

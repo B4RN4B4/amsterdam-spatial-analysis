@@ -462,7 +462,6 @@ rather than contemporary urban planning forces.
 - Full data table: water %, green km², parking pressure, NO2 by Stadsdeel
 
 ---
----
 
 ### 22. Population-Weighted Park Accessibility
 Refining the park accessibility analysis from Project 15 by weighting 
@@ -497,6 +496,45 @@ less densely populated areas.
 **Outputs:**
 - Comparative bar chart: area-based vs population-weighted by Stadsdeel
 - Population accessibility statistics by district
+
+---
+---
+
+### 23. PostGIS Advanced — Materialized Views & Proximity Analysis
+Advanced spatial SQL session building on the PostGIS database 
+established in Project 17.
+
+**Tools:** PostgreSQL 17 · PostGIS 3.6 · pgAdmin 4 · Python · SQLAlchemy
+
+**Key concepts covered:**
+
+**Spatial indexes (GIST):** GeoAlchemy2 creates GIST indexes automatically 
+on import — confirmed on all three tables (edifici, quartieri, parchi). 
+GIST organises geometries in a hierarchical tree structure, reducing 
+spatial query complexity from O(n²) to O(log n).
+
+**Materialized views:** Created `stats_quartieri` — a precomputed table 
+storing building statistics per neighbourhood (count, average year, 
+oldest/newest building, area, density). Queried instantly without 
+recalculation. Burgwallen-Oost confirmed as densest historic district 
+at 5,146 buildings/km², with oldest building dating to 1462.
+
+**CROSS JOIN LATERAL:** The standard PostGIS pattern for 
+"find the nearest X for each Y" queries. For each park, finds the 
+oldest building within 100 metres using ST_DWithin + GIST index. 
+Result: Wertheimpark has a building from 1625 just 43 metres away.
+
+**ST_ClosestPoint & ST_Distance:** Used to calculate exact distances 
+and nearest points between geometries — standard tools for 
+professional proximity analysis.
+
+**Key findings:**
+- Oldest building near a park: 1615 (Rembrandtplein, De Hoftuin)
+- Frankendael park contains a building from 1700 inside its boundaries
+- Most park-distant neighbourhoods: Weesp (up to 1,964m from Diemerbos)
+  and Westpoort industrial zones
+
+**SQL queries:** See `amsterdam_postgis_advanced.sql`
 
 ---
 

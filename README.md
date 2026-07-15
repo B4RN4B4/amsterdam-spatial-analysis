@@ -498,7 +498,6 @@ less densely populated areas.
 - Population accessibility statistics by district
 
 ---
----
 
 ### 23. PostGIS Advanced — Materialized Views & Proximity Analysis
 Advanced spatial SQL session building on the PostGIS database 
@@ -535,6 +534,43 @@ professional proximity analysis.
   and Westpoort industrial zones
 
 **SQL queries:** See `amsterdam_postgis_advanced.sql`
+
+---
+---
+
+### 24. VOC Historical Mapping — Amsterdam's Golden Age
+Mapping the physical traces of the Dutch East India Company (VOC) 
+in Amsterdam, overlaid with the building boom it generated during 
+the 17th century Golden Age.
+
+**Tools:** Python · GeoPandas · Folium · Matplotlib · Pandas
+
+**Historical context:**
+The VOC (Vereenigde Oostindische Compagnie), founded in 1602, was the 
+world's first publicly traded company. Its profits financed the construction 
+of Amsterdam's iconic canal ring and transformed a medieval trading port 
+into the financial capital of the world. The company operated until 1799.
+
+**Key findings:**
+- Only 23 buildings survive from pre-VOC Amsterdam (1500–1599)
+- 1,265 buildings from the Golden Age (1600–1700) are still standing today
+- The building boom begins immediately after 1602 and peaks in the 1650s–1690s
+- Construction continues after 1700 but shifts to peripheral expansion 
+  as VOC influence declines
+
+**Dataset constructed manually:**
+10 historic VOC and pre-VOC sites geocoded and described:
+- Oost-Indisch Huis (1606) — VOC headquarters
+- West-Indisch Huis (1617) — WIC headquarters, where Manhattan was purchased
+- Entrepotdok (1708) — VOC warehouse complex
+- Beurs van Berlage (1903) — built on the site of the world's first stock exchange
+- And 6 more sites spanning 1488–1916
+
+**Outputs:**
+- Interactive Folium map with VOC sites, Golden Age buildings, pre-VOC buildings
+- Building boom timeline (1400–1750) with VOC founding and decline markers
+
+🗺️ [Open Interactive VOC Map](https://b4rn4b4.github.io/amsterdam-spatial-analysis/amsterdam_voc_map.html)
 
 ---
 

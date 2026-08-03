@@ -536,7 +536,6 @@ professional proximity analysis.
 **SQL queries:** See `amsterdam_postgis_advanced.sql`
 
 ---
----
 
 ### 24. VOC Historical Mapping — Amsterdam's Golden Age
 Mapping the physical traces of the Dutch East India Company (VOC) 
@@ -571,6 +570,44 @@ into the financial capital of the world. The company operated until 1799.
 - Building boom timeline (1400–1750) with VOC founding and decline markers
 
 🗺️ [Open Interactive VOC Map](https://b4rn4b4.github.io/amsterdam-spatial-analysis/amsterdam_voc_map.html)
+
+---
+
+### 25. Industrial Heritage & Working Areas
+Mapping Amsterdam's functional land use using the Functiemix dataset —
+a continuation of the VOC historical thread, tracing the city's 
+economic geography from the Golden Age to the present.
+
+**Tools:** Python · GeoPandas · Matplotlib  
+**Data source:** Amsterdam Open Data — Functiemix (19,302 urban blocks)
+
+**Variables:**
+- **WON** — Wonen (residential)
+- **VZN** — Voorzieningen (services/facilities)
+- **WRK** — Werken (working/industrial)
+
+**Threshold choice:**
+The 70% threshold for classifying a district as "predominantly industrial" 
+was chosen deliberately, grounded in the Dutch urban planning concept of 
+**functiemenging** (functional mixing) — the idea that cities work better 
+when residential, commercial, and working functions coexist. 
+Below 70%, genuine functional mix is still present. 
+Above 70%, a zone is effectively monofunctional.
+A 50% threshold was considered but rejected as too arbitrary — 
+it would have misclassified mixed districts as industrial.
+
+**Key findings:**
+- Only Westpoort (97.6%) crosses the 70% threshold — the port zone, 
+  never designed for residential use
+- Weesp (44.6%) and Zuidoost (38.9%) have significant working components 
+  but remain genuinely mixed
+- Amsterdam is fundamentally a mixed-use city — functiemenging is 
+  visible in the data, not just in policy documents
+- West (19.7%) is the most residential district among the central ones
+
+**Outputs:**
+- Functional land use map by urban block
+- Industrial/working areas chart by Stadsdeel (70% threshold)
 
 ---
 

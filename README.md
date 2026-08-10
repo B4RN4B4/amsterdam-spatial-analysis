@@ -611,6 +611,40 @@ it would have misclassified mixed districts as industrial.
 
 ---
 
+### 26. Amsterdam vs Manhattan — Urban Morphology Comparison
+A comparative analysis of building age distribution between Amsterdam 
+and New Amsterdam (Manhattan) — two cities connected by 400 years of history.
+
+**Tools:** Python · GeoPandas · Matplotlib  
+**Data sources:**
+- Amsterdam Open Data — Bouwjaar Pand (44,472 buildings)
+- NYC Department of City Planning — MapPLUTO 26v1 (40,048 buildings, Manhattan only)
+
+**Historical context:**
+In 1626 the Dutch West India Company (WIC) purchased Manhattan from the 
+Lenape people and founded Nieuw Amsterdam. The colony was captured by 
+the English in 1664 and renamed New York. The Dutch urban structure — 
+street patterns, canal traces, place names — partially survives to this day.
+
+**Key findings:**
+- Both cities have a surprisingly similar median building age: 
+  Amsterdam 1906, Manhattan 1910
+- But the distributions tell completely different stories:
+  - Amsterdam: gradual accumulation over 4 centuries, visible as 
+    concentric rings of colour from historic centre outward
+  - Manhattan: explosive growth concentrated in 1890–1930, 
+    almost uniform in colour — a city built in a single great wave
+- Amsterdam's building stock shows layered history; 
+  Manhattan's shows a single dominant era
+- After 1950: Amsterdam continues building steadily; 
+  Manhattan slows dramatically — the island was already full
+
+**Outputs:**
+- Side-by-side building age histograms (1600–2025)
+- Side-by-side building age maps with shared colour scale
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

@@ -645,6 +645,43 @@ street patterns, canal traces, place names — partially survives to this day.
 
 ---
 
+### 27. Airbnb Tourism Pressure vs Resident Population
+Mapping the concentration of Airbnb listings relative to resident 
+population across Amsterdam's neighbourhoods — measuring where 
+tourism pressure is most intense for local communities.
+
+**Tools:** Python · GeoPandas · Pandas · Matplotlib  
+**Data sources:**
+- Inside Airbnb (insideairbnb.com) — Amsterdam listings, June 2026
+- CBS Kerncijfers wijken en buurten 2023 — resident population
+- Inside Airbnb neighbourhood boundaries (22 areas)
+
+**Key findings:**
+- 10,465 Airbnb listings in Amsterdam (June 2026)
+- 81% are entire apartments — not spare rooms, but homes removed 
+  from the residential market
+- Average price: €394/night for entire apartments
+- De Baarsjes/Oud-West has the highest pressure: 18.6 listings 
+  per 1,000 residents — higher than the historic centre
+- Centrum-West (16.9) and De Pijp (15.4) follow closely
+- Bijlmer-Oost (0.9) and Osdorp (0.9) have almost no tourist presence
+
+**Key insight:**
+Tourism pressure does not peak in the historic centre — it peaks 
+in the adjacent residential neighbourhoods that tourists discovered 
+as "authentic" alternatives. This is the classic pattern of 
+turistification: it expands outward until neighbouring areas 
+become unaffordable for residents too.
+
+Amsterdam has limited Airbnb rentals to 30 days/year since 2020, 
+but the data shows pressure remains high.
+
+**Outputs:**
+- Choropleth map: Airbnb listings by neighbourhood (absolute count)
+- Combined chart + map: Airbnb pressure per 1,000 residents
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

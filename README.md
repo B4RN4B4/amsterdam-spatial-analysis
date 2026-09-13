@@ -682,6 +682,42 @@ but the data shows pressure remains high.
 
 ---
 
+### 28. Public Transport Accessibility — Tram & Metro Network
+Measuring what percentage of Amsterdam's population lives within 
+500 metres of a tram or metro stop, using the 2025 network data.
+
+**Tools:** Python · GeoPandas · Pandas · Matplotlib  
+**Data sources:**
+- Amsterdam Open Data — Tramhaltes en metrostations 2025 (236 stops)
+- Amsterdam Open Data — Tram- en metrolijnen 2025 (193 line segments)
+- CBS Kerncijfers wijken en buurten 2023 — resident population
+
+**Key findings:**
+- 72.5% of Amsterdam's population lives within 500m of a tram or metro stop
+- Centrum (95.8%) and West (93.8%) are best served — dense tram network
+- Noord (11.5%) is the most underserved district — 106,000 residents 
+  with almost no tram/metro coverage, separated from the city by the IJ river
+- Zuidoost (54%) has metro coverage but widely spaced stops
+- Weesp and Westpoort (0%) — served by national rail and ferry, not municipal tram/metro
+
+**Interesting comparison:**
+Amsterdam serves its residents slightly better with green space (77.6%) 
+than with tram/metro (72.5%) — an unusual finding for a city famous 
+for its public transport.
+
+**Notable feature:**
+The Uithoornlijn — a new tram line inaugurated in 2023 connecting 
+Amsterdam to Uithoorn (15km south) — is visible as a long red line 
+extending beyond the city boundary. Amsterdam is expanding its 
+public transport network into the wider metropolitan area.
+
+**Outputs:**
+- Tram & metro network map (lines + stops)
+- Public transport accessibility choropleth map by neighbourhood
+- Population-weighted accessibility by Stadsdeel
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

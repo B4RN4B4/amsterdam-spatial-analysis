@@ -718,6 +718,40 @@ public transport network into the wider metropolitan area.
 
 ---
 
+### 29. Energy Transition — Solar Panels & Gas-free Zones
+Mapping Amsterdam's energy transition through two complementary datasets: 
+solar panel installations (2016–2025) and gas-free neighbourhood strategies.
+
+**Tools:** Python · GeoPandas · Pandas · Matplotlib  
+**Data sources:**
+- Amsterdam Open Data — Zonnepanelen (31,977 buildings with solar data)
+- Amsterdam Open Data — Aardgasvrij (475 neighbourhoods with gas-free strategy)
+
+**Solar panel growth (2016–2025):**
+- Installations: 3,785 → 31,977 (9x in 9 years)
+- Total panels: 81,902 → 975,078 (12x)
+- Peak capacity: 20 MW → 356 MW (17x)
+- Sharp acceleration after 2022/2023 — likely driven by the European 
+  energy crisis following the Ukraine invasion
+
+**Gas-free transition strategies:**
+- Warmtenetbuurt (200 zones) — district heating network — most common approach
+- Aardgasvrij gasnet (121) — existing gas network converted to gas-free
+- All electric (18) — full electrification
+- Already (almost) fully on district heating (33)
+- New construction/transformation areas (33)
+
+**Key observations:**
+- Solar panels are distributed across the entire city — not concentrated in wealthy or peripheral areas
+- Historic centre has fewer installations — likely due to heritage protection restrictions on roof modifications
+- District heating dominates the centre; electrification is rarer but growing
+
+**Outputs:**
+- Solar panel growth chart (installations + MW peak, 2016–2025)
+- Combined energy transition map (solar density + gas-free strategies)
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 

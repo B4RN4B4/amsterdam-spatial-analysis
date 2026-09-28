@@ -752,6 +752,53 @@ solar panel installations (2016–2025) and gas-free neighbourhood strategies.
 
 ---
 
+### 30 — Sidewalk Accessibility Analysis (Amsterdam)
+
+## Overview
+This project maps and classifies the accessibility of Amsterdam's sidewalk network for wheelchair, rollator and mobility scooter users, based on municipal sidewalk width data.
+
+**Note on scope**: this dataset covers a sample area surveyed by the municipality (mainly the central canal ring plus scattered blocks elsewhere), not the full city network. It should be read as an accessibility snapshot of the surveyed segments, not a citywide assessment.
+
+## Data source
+- **Dataset**: [Voetpaden breedte](https://maps.amsterdam.nl/open_geodata/) (sidewalk width), Gemeente Amsterdam Open Data
+- **Vintage**: 2017 — the most recent version available at the time of analysis
+- **Format**: GeoJSON, 4,615 line segments, WGS84 (EPSG:4326)
+
+## Methodology
+1. Reprojected to EPSG:28992 (RD New) for accurate length calculations
+2. Classified each segment's `ComfortLevel` field against accessibility thresholds from the Dutch national accessibility design guidance (BAT — *Voetpaden voor iedereen* / CROW):
+   - **< 0.9m**: inaccessible
+   - **0.9m**: absolute minimum, tolerable only at isolated pinch points (poles, signage) — not on extended stretches
+   - **≥ 1.8m**: meets the standard for routes with regular wheelchair/rollator/scooter use
+   - **Undetermined**: ~13% of network length not yet classified by the municipality
+3. Statistics computed by total network length (km), not segment count — segment count overstates the "undetermined" share, since undetermined segments tend to be shorter on average
+
+## Key findings
+
+- 55.7% of the surveyed network meets the accessibility standard for intensive wheelchair/rollator use (≥1.8m)
+- 22.0% sits at the absolute minimum width (0.9m), acceptable only in isolated pinch points
+- 8.8% falls below the minimum threshold
+- 13.4% remains unclassified by the municipality
+
+## Files
+
+- `30_sidewalk_accessibility.ipynb` — analysis notebook
+- `distribuzione_comfortlevel.png` — width distribution chart
+- `voetpaden_accessibilita.html` — interactive map
+
+## Tools
+Python, geopandas, folium. Basemap tiles: Esri World Light Gray Canvas.
+
+## Limitations
+- Sample-area coverage only, not citywide
+- Data vintage: 2017
+- Classification thresholds are researcher-applied (based on BAT/CROW guidance), not an official municipal accessibility rating
+
+## Next steps
+Exploring the Dutch BGT (Basisregistratie Grootschalige Topografie) national topographic register via PDOK as a potential source for full-coverage sidewalk geometry.
+
+---
+
 ## Data Sources
 All data from [Amsterdam Open Data](https://maps.amsterdam.nl/open_geodata/)
 
